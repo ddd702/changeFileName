@@ -30,30 +30,6 @@ D.utils = { //工具类
             }
         }
         return format;
-    },
-    extend: function(obj1, obj2) { //浅度合并obj1，obj2并返回新对象
-        var obj = {};
-        var o1 = obj1;
-        var o2 = this.clone(obj2);
-        for (var prop in o1) {
-            if (o2.hasOwnProperty(prop)) {
-                obj[prop] = o2[prop];
-                delete o2[prop];
-            } else {
-                obj[prop] = o1[prop];
-            }
-        }
-        for (var prop in o2) {
-            obj[prop] = o2[prop];
-        }
-        return obj;
-    },
-    clone: function(obj) { //返回一个克隆的对象  
-        var newObj = {};
-        for (var prop in obj) {
-            newObj[prop] = obj[prop];
-        }
-        return newObj;
     }
 };
 
